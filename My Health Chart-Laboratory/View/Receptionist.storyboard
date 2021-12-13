@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Receptionist TabbarVC-->
+        <scene sceneID="2iv-a6-B2P">
+            <objects>
+                <viewController storyboardIdentifier="ReceptionistTabbarVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IHr-qQ-Krw" customClass="ReceptionistTabbarVC" customModule="My_Health_Chart_Laboratory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="69i-Un-mVv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vcg-2z-6CF">
+                                <rect key="frame" x="0.0" y="10" width="414" height="102"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWR-dv-6DI">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SXM-1v-pyo">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="48"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Si4-vA-w7n" customClass="BorderImageView" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Si4-vA-w7n" secondAttribute="height" multiplier="1:1" id="iLH-Ei-Teb"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundedCorners" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v31-xg-Rjz">
+                                                        <rect key="frame" x="56" y="0.0" width="270" height="48"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF8-Pz-gGr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="270" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="iGw-7P-k73"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                                                <color key="textColor" name="AppFontPrimaryColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maria Smith" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qB9-ho-A8a">
+                                                                <rect key="frame" x="0.0" y="20" width="270" height="28"/>
+                                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
+                                                                <color key="textColor" name="AppFontPrimaryColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfW-WS-Had">
+                                                        <rect key="frame" x="334" y="0.0" width="48" height="48"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxP-Gj-u1i" customClass="CustomButton" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+                                                                <rect key="frame" x="4" y="4" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="bxP-Gj-u1i" secondAttribute="height" multiplier="1:1" id="JD3-KY-hD8"/>
+                                                                </constraints>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" image="ic_notification"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" name="AppFontSecondaryColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundRectButton" value="NO"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="0.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="bxP-Gj-u1i" firstAttribute="centerY" secondItem="vfW-WS-Had" secondAttribute="centerY" id="Cei-zU-Qq6"/>
+                                                            <constraint firstItem="bxP-Gj-u1i" firstAttribute="top" secondItem="vfW-WS-Had" secondAttribute="top" constant="4" id="CzZ-9a-7qf"/>
+                                                            <constraint firstItem="bxP-Gj-u1i" firstAttribute="centerX" secondItem="vfW-WS-Had" secondAttribute="centerX" id="UmG-VM-e9c"/>
+                                                            <constraint firstAttribute="trailing" secondItem="bxP-Gj-u1i" secondAttribute="trailing" constant="4" id="xd3-Xk-Htr"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="hPn-eS-x3P"/>
+                                                </constraints>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdM-Wp-2Zm">
+                                                <rect key="frame" x="16" y="0.0" width="326" height="48"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="btnProfilePressed:" destination="IHr-qQ-Krw" eventType="touchUpInside" id="DlG-AD-Qgy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="SXM-1v-pyo" firstAttribute="top" secondItem="WWR-dv-6DI" secondAttribute="top" id="5YX-uo-Nsd"/>
+                                            <constraint firstItem="SXM-1v-pyo" firstAttribute="leading" secondItem="WWR-dv-6DI" secondAttribute="leading" constant="16" id="C6D-MV-qwk"/>
+                                            <constraint firstAttribute="trailing" secondItem="SXM-1v-pyo" secondAttribute="trailing" constant="16" id="FpJ-bK-nvL"/>
+                                            <constraint firstAttribute="bottom" secondItem="SXM-1v-pyo" secondAttribute="bottom" id="HxT-I0-Qy9"/>
+                                            <constraint firstItem="UdM-Wp-2Zm" firstAttribute="leading" secondItem="Si4-vA-w7n" secondAttribute="leading" id="aYX-RT-AwV"/>
+                                            <constraint firstItem="UdM-Wp-2Zm" firstAttribute="bottom" secondItem="Si4-vA-w7n" secondAttribute="bottom" id="e25-ZV-Zs1"/>
+                                            <constraint firstItem="UdM-Wp-2Zm" firstAttribute="trailing" secondItem="v31-xg-Rjz" secondAttribute="trailing" id="pwR-EB-1Qj"/>
+                                            <constraint firstItem="UdM-Wp-2Zm" firstAttribute="top" secondItem="Si4-vA-w7n" secondAttribute="top" id="vvz-vo-8R8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrT-47-Ne0">
+                                        <rect key="frame" x="0.0" y="58" width="414" height="44"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Order or patient name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dhB-1o-dM8" customClass="AppTextfield" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="ic_search"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="Padding">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="dhB-1o-dM8" secondAttribute="trailing" constant="16" id="EdU-OO-hzi"/>
+                                            <constraint firstAttribute="height" constant="44" id="Hb8-7G-tLY"/>
+                                            <constraint firstAttribute="bottom" secondItem="dhB-1o-dM8" secondAttribute="bottom" id="kIb-IK-I9U"/>
+                                            <constraint firstItem="dhB-1o-dM8" firstAttribute="top" secondItem="YrT-47-Ne0" secondAttribute="top" id="ohS-jB-i5u"/>
+                                            <constraint firstItem="dhB-1o-dM8" firstAttribute="leading" secondItem="YrT-47-Ne0" secondAttribute="leading" constant="16" id="ui8-VP-HQR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcP-n2-HWw">
+                                <rect key="frame" x="0.0" y="120" width="414" height="556"/>
+                                <connections>
+                                    <segue destination="L7S-Cb-HJe" kind="embed" id="co6-PY-vU1"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAA-iV-5My">
+                                <rect key="frame" x="0.0" y="676" width="414" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OuG-xe-RRE" customClass="CustomView" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+                                        <rect key="frame" x="173.66666666666666" y="-10" width="67" height="67"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oO0-M0-dIe" customClass="CustomView" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+                                                <rect key="frame" x="7" y="7" width="53" height="53"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jh-Y0-K91" customClass="CustomButton" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+                                                        <rect key="frame" x="5" y="5" width="43" height="43"/>
+                                                        <color key="backgroundColor" name="AppPrimaryColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="0Jh-Y0-K91" secondAttribute="height" multiplier="1:1" id="P10-zk-iYC"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="plus" catalog="system">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundRectButton" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="btnBookAppointmentPressed:" destination="IHr-qQ-Krw" eventType="touchUpInside" id="GXC-VA-f5p"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.83984214069999996" green="0.92776781320000001" blue="0.99809664490000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="oO0-M0-dIe" secondAttribute="height" multiplier="1:1" id="Arb-Rc-P9j"/>
+                                                    <constraint firstItem="0Jh-Y0-K91" firstAttribute="centerX" secondItem="oO0-M0-dIe" secondAttribute="centerX" id="NGR-vA-Zb5"/>
+                                                    <constraint firstItem="0Jh-Y0-K91" firstAttribute="centerY" secondItem="oO0-M0-dIe" secondAttribute="centerY" id="QBW-mQ-aEa"/>
+                                                    <constraint firstItem="0Jh-Y0-K91" firstAttribute="top" secondItem="oO0-M0-dIe" secondAttribute="top" constant="5" id="U3O-cO-rbF"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundRectButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="67" id="EAF-ei-Fuh"/>
+                                            <constraint firstItem="oO0-M0-dIe" firstAttribute="top" secondItem="OuG-xe-RRE" secondAttribute="top" constant="7" id="GTd-Wt-4LM"/>
+                                            <constraint firstAttribute="height" constant="67" id="ik8-hl-4vD"/>
+                                            <constraint firstItem="oO0-M0-dIe" firstAttribute="centerX" secondItem="OuG-xe-RRE" secondAttribute="centerX" id="kin-CQ-feq"/>
+                                            <constraint firstItem="oO0-M0-dIe" firstAttribute="centerY" secondItem="OuG-xe-RRE" secondAttribute="centerY" id="yfH-Rj-Jl4"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundRectButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2a3-Tt-LXF">
+                                        <rect key="frame" x="0.0" y="8" width="165.66666666666666" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAr-6V-rpe" customClass="VerticalButton" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="44"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Home" image="ic_home_tab_blue">
+                                                    <color key="titleColor" name="AppPrimaryColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnTabbarPressed:" destination="IHr-qQ-Krw" eventType="touchUpInside" id="ouJ-6E-Z3S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrp-MH-fU9" customClass="VerticalButton" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+                                                <rect key="frame" x="82.666666666666671" y="0.0" width="83.000000000000014" height="44"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Accepted" image="ic_accepted_order_grey">
+                                                    <color key="titleColor" name="AppFontSecondaryColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnTabbarPressed:" destination="IHr-qQ-Krw" eventType="touchUpInside" id="ZYI-EH-HkG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tnI-7h-FVZ">
+                                        <rect key="frame" x="248.66666666666663" y="8" width="165.33333333333337" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27I-Vq-gt0" customClass="VerticalButton" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="44"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Samples" image="ic_sample_grey">
+                                                    <color key="titleColor" name="AppFontSecondaryColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnTabbarPressed:" destination="IHr-qQ-Krw" eventType="touchUpInside" id="sJF-Mi-imj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eee-pP-i9e" customClass="VerticalButton" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+                                                <rect key="frame" x="82.666666666666657" y="0.0" width="82.666666666666657" height="44"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Completed" image="ic_completed_order_grey">
+                                                    <color key="titleColor" name="AppFontSecondaryColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnTabbarPressed:" destination="IHr-qQ-Krw" eventType="touchUpInside" id="I0H-0m-K43"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="OuG-xe-RRE" secondAttribute="bottom" constant="3" id="5dH-7k-dwR"/>
+                                    <constraint firstAttribute="trailing" secondItem="tnI-7h-FVZ" secondAttribute="trailing" id="A9p-Ux-ziy"/>
+                                    <constraint firstItem="2a3-Tt-LXF" firstAttribute="leading" secondItem="FAA-iV-5My" secondAttribute="leading" id="DIv-Du-vnn"/>
+                                    <constraint firstItem="OuG-xe-RRE" firstAttribute="centerX" secondItem="FAA-iV-5My" secondAttribute="centerX" id="JyX-L5-O87"/>
+                                    <constraint firstItem="2a3-Tt-LXF" firstAttribute="top" secondItem="FAA-iV-5My" secondAttribute="top" constant="8" id="KAS-1Y-IFf"/>
+                                    <constraint firstItem="tnI-7h-FVZ" firstAttribute="leading" secondItem="OuG-xe-RRE" secondAttribute="trailing" constant="8" id="Lx5-U3-Wso"/>
+                                    <constraint firstItem="tnI-7h-FVZ" firstAttribute="top" secondItem="FAA-iV-5My" secondAttribute="top" constant="8" id="TfX-1K-75J"/>
+                                    <constraint firstAttribute="height" constant="60" id="a0b-A6-sQj"/>
+                                    <constraint firstAttribute="bottom" secondItem="tnI-7h-FVZ" secondAttribute="bottom" constant="8" id="hx2-wc-1Qw"/>
+                                    <constraint firstAttribute="bottom" secondItem="2a3-Tt-LXF" secondAttribute="bottom" constant="8" id="qlo-v3-KS6"/>
+                                    <constraint firstItem="OuG-xe-RRE" firstAttribute="leading" secondItem="2a3-Tt-LXF" secondAttribute="trailing" constant="8" id="zRN-2h-lFx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fBw-f4-thB"/>
+                        <color key="backgroundColor" name="AppSecondaryColor"/>
+                        <constraints>
+                            <constraint firstItem="wcP-n2-HWw" firstAttribute="leading" secondItem="fBw-f4-thB" secondAttribute="leading" id="2Mz-t2-mXS"/>
+                            <constraint firstItem="wcP-n2-HWw" firstAttribute="top" secondItem="Vcg-2z-6CF" secondAttribute="bottom" constant="8" id="4Hq-C6-zxF"/>
+                            <constraint firstItem="FAA-iV-5My" firstAttribute="top" secondItem="wcP-n2-HWw" secondAttribute="bottom" id="XVo-Pg-yOe"/>
+                            <constraint firstItem="FAA-iV-5My" firstAttribute="bottom" secondItem="fBw-f4-thB" secondAttribute="bottom" id="ZdK-Xp-l0e"/>
+                            <constraint firstItem="wcP-n2-HWw" firstAttribute="trailing" secondItem="fBw-f4-thB" secondAttribute="trailing" id="b7j-wo-BhR"/>
+                            <constraint firstItem="Vcg-2z-6CF" firstAttribute="leading" secondItem="fBw-f4-thB" secondAttribute="leading" id="c3m-04-r05"/>
+                            <constraint firstItem="Vcg-2z-6CF" firstAttribute="top" secondItem="fBw-f4-thB" secondAttribute="top" constant="10" id="iwJ-12-Iki"/>
+                            <constraint firstItem="FAA-iV-5My" firstAttribute="leading" secondItem="fBw-f4-thB" secondAttribute="leading" id="rO7-K1-TJW"/>
+                            <constraint firstItem="fBw-f4-thB" firstAttribute="trailing" secondItem="Vcg-2z-6CF" secondAttribute="trailing" id="sBH-Tw-gWQ"/>
+                            <constraint firstItem="FAA-iV-5My" firstAttribute="trailing" secondItem="fBw-f4-thB" secondAttribute="trailing" id="yLz-i9-eU0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="wcP-n2-HWw" id="U2Q-S2-1oO"/>
+                        <outlet property="imageViewUserProfile" destination="Si4-vA-w7n" id="uEi-Cs-6SQ"/>
+                        <outletCollection property="tabButtons" destination="jAr-6V-rpe" collectionClass="NSMutableArray" id="FC5-bh-YxT"/>
+                        <outletCollection property="tabButtons" destination="yrp-MH-fU9" collectionClass="NSMutableArray" id="l1u-m0-7Wi"/>
+                        <outletCollection property="tabButtons" destination="27I-Vq-gt0" collectionClass="NSMutableArray" id="XBS-wT-mxI"/>
+                        <outletCollection property="tabButtons" destination="eee-pP-i9e" collectionClass="NSMutableArray" id="vr4-zb-IP8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qw7-B7-A5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="85.59782608695653"/>
+        </scene>
+        <!--Receptionist Sample ListVC-->
+        <scene sceneID="qTr-M3-Fvx">
+            <objects>
+                <viewController storyboardIdentifier="ReceptionistSampleListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Plo-en-Qre" customClass="ReceptionistSampleListVC" customModule="My_Health_Chart_Laboratory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PnG-CH-RMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rd5-ZJ-lOy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NL0-Rg-pJS">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Plo-en-Qre" id="9m8-XE-NwP"/>
+                                            <outlet property="delegate" destination="Plo-en-Qre" id="J4Z-au-qgo"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HTp-Yw-pGI"/>
+                        <color key="backgroundColor" name="AppSecondaryColor"/>
+                        <constraints>
+                            <constraint firstItem="rd5-ZJ-lOy" firstAttribute="top" secondItem="HTp-Yw-pGI" secondAttribute="top" id="6WQ-Ei-6yr"/>
+                            <constraint firstItem="rd5-ZJ-lOy" firstAttribute="leading" secondItem="HTp-Yw-pGI" secondAttribute="leading" id="QlD-uZ-gLH"/>
+                            <constraint firstAttribute="trailing" secondItem="rd5-ZJ-lOy" secondAttribute="trailing" id="lgL-0O-QvU"/>
+                            <constraint firstItem="HTp-Yw-pGI" firstAttribute="bottom" secondItem="rd5-ZJ-lOy" secondAttribute="bottom" id="zzj-K6-6m9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewSampleOrders" destination="NL0-Rg-pJS" id="2Yb-bL-4xf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUJ-L4-TFu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1358" y="86"/>
+        </scene>
+        <!--Receptionist HomeVC-->
+        <scene sceneID="xMV-rx-17t">
+            <objects>
+                <viewController storyboardIdentifier="ReceptionistHomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2JT-pS-4TE" customClass="ReceptionistHomeVC" customModule="My_Health_Chart_Laboratory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9e1-WD-hzC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jyh-sU-pOB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="VyT-em-4jj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I1q-QZ-ILZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbo-P1-rmn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="49"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                                        <state key="normal" title="All">
+                                                            <color key="titleColor" name="AppPrimaryColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnTabBarPressed:" destination="2JT-pS-4TE" eventType="touchUpInside" id="gR1-bN-ig6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6I3-sQ-UmH">
+                                                        <rect key="frame" x="0.0" y="49" width="135.33333333333334" height="1"/>
+                                                        <color key="backgroundColor" name="AppPrimaryColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="MVW-BO-hSC"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Xs-r2-V0X">
+                                                <rect key="frame" x="139.33333333333331" y="0.0" width="135.33333333333331" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9m-eB-7Qx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="50"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                        <state key="normal" title="Paid">
+                                                            <color key="titleColor" name="AppFontSecondaryColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnTabBarPressed:" destination="2JT-pS-4TE" eventType="touchUpInside" id="30V-ti-sZv"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbW-k2-odk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="1"/>
+                                                        <color key="backgroundColor" name="AppPrimaryColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="2hu-eT-5r1"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="msa-7t-sQS">
+                                                <rect key="frame" x="278.66666666666669" y="0.0" width="135.33333333333331" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVR-eU-QdD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="50"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                        <state key="normal" title="Unpaid">
+                                                            <color key="titleColor" name="AppFontSecondaryColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnTabBarPressed:" destination="2JT-pS-4TE" eventType="touchUpInside" id="573-n5-Tyo"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwi-QV-0CR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="1"/>
+                                                        <color key="backgroundColor" name="AppPrimaryColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="bwW-Ov-mLy"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mGu-Ug-Wen"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pE9-t3-CBG">
+                                        <rect key="frame" x="0.0" y="58" width="414" height="678"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZqE-zi-nHv"/>
+                        <color key="backgroundColor" name="AppSecondaryColor"/>
+                        <constraints>
+                            <constraint firstItem="jyh-sU-pOB" firstAttribute="trailing" secondItem="ZqE-zi-nHv" secondAttribute="trailing" id="3Y1-BE-xTO"/>
+                            <constraint firstItem="jyh-sU-pOB" firstAttribute="top" secondItem="ZqE-zi-nHv" secondAttribute="top" id="BNY-fO-dHo"/>
+                            <constraint firstItem="jyh-sU-pOB" firstAttribute="bottom" secondItem="ZqE-zi-nHv" secondAttribute="bottom" id="IPX-29-IQu"/>
+                            <constraint firstItem="jyh-sU-pOB" firstAttribute="leading" secondItem="ZqE-zi-nHv" secondAttribute="leading" id="g6b-ph-j05"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="uiViewTabContainer" destination="pE9-t3-CBG" id="Rcy-H7-7mz"/>
+                        <outletCollection property="btnTabBar" destination="qbo-P1-rmn" collectionClass="NSMutableArray" id="TO6-o8-jFc"/>
+                        <outletCollection property="btnTabBar" destination="a9m-eB-7Qx" collectionClass="NSMutableArray" id="Iot-QS-ixe"/>
+                        <outletCollection property="btnTabBar" destination="fVR-eU-QdD" collectionClass="NSMutableArray" id="HoC-M6-VJk"/>
+                        <outletCollection property="uiViewUnderLine" destination="6I3-sQ-UmH" collectionClass="NSMutableArray" id="aAS-BQ-0qL"/>
+                        <outletCollection property="uiViewUnderLine" destination="hbW-k2-odk" collectionClass="NSMutableArray" id="dbm-O3-HfB"/>
+                        <outletCollection property="uiViewUnderLine" destination="Dwi-QV-0CR" collectionClass="NSMutableArray" id="uY0-Ft-exk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="POA-gQ-6vh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="757"/>
+        </scene>
+        <!--Receptionist Home AllVC-->
+        <scene sceneID="VlE-sa-z8q">
+            <objects>
+                <viewController storyboardIdentifier="ReceptionistHomeAllVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kuQ-qZ-zMF" customClass="ReceptionistHomeAllVC" customModule="My_Health_Chart_Laboratory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x7u-yh-Odf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CDm-nW-cYa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="kuQ-qZ-zMF" id="t0g-P6-HQw"/>
+                                    <outlet property="delegate" destination="kuQ-qZ-zMF" id="A9c-hJ-CRT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fyS-KT-sBD"/>
+                        <color key="backgroundColor" name="AppSecondaryColor"/>
+                        <constraints>
+                            <constraint firstItem="CDm-nW-cYa" firstAttribute="bottom" secondItem="fyS-KT-sBD" secondAttribute="bottom" id="Xvk-vL-cPU"/>
+                            <constraint firstItem="CDm-nW-cYa" firstAttribute="trailing" secondItem="fyS-KT-sBD" secondAttribute="trailing" id="fIJ-n6-3se"/>
+                            <constraint firstItem="CDm-nW-cYa" firstAttribute="leading" secondItem="fyS-KT-sBD" secondAttribute="leading" id="yTW-MV-Ehv"/>
+                            <constraint firstItem="CDm-nW-cYa" firstAttribute="top" secondItem="fyS-KT-sBD" secondAttribute="top" id="ykF-rT-hrq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewOrder" destination="CDm-nW-cYa" id="J0n-te-QeC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAZ-Nx-zVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="757"/>
+        </scene>
+        <!--Receptionist Home PaidVC-->
+        <scene sceneID="6et-ix-8kl">
+            <objects>
+                <viewController storyboardIdentifier="ReceptionistHomePaidVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R2i-vR-Lyo" customClass="ReceptionistHomePaidVC" customModule="My_Health_Chart_Laboratory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gHp-uK-PEC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4fd-vL-b3G">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="R2i-vR-Lyo" id="LYe-zs-2lS"/>
+                                    <outlet property="delegate" destination="R2i-vR-Lyo" id="tho-Sd-vCe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Eqf-vC-Acf"/>
+                        <color key="backgroundColor" name="AppSecondaryColor"/>
+                        <constraints>
+                            <constraint firstItem="4fd-vL-b3G" firstAttribute="leading" secondItem="Eqf-vC-Acf" secondAttribute="leading" id="FCE-Vi-MQM"/>
+                            <constraint firstItem="4fd-vL-b3G" firstAttribute="trailing" secondItem="Eqf-vC-Acf" secondAttribute="trailing" id="Mpw-QO-BBX"/>
+                            <constraint firstItem="4fd-vL-b3G" firstAttribute="top" secondItem="Eqf-vC-Acf" secondAttribute="top" id="Zex-8d-2Cd"/>
+                            <constraint firstItem="4fd-vL-b3G" firstAttribute="bottom" secondItem="Eqf-vC-Acf" secondAttribute="bottom" id="ekh-0q-5Ur"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewOrder" destination="4fd-vL-b3G" id="PX4-fp-VIu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKU-GW-RpV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="757"/>
+        </scene>
+        <!--Receptionist Home UnpaidVC-->
+        <scene sceneID="WQH-QT-tKH">
+            <objects>
+                <viewController storyboardIdentifier="ReceptionistHomeUnpaidVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qxx-7t-4Cl" customClass="ReceptionistHomeUnpaidVC" customModule="My_Health_Chart_Laboratory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sV6-bd-bNs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zTW-Cj-6DT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qxx-7t-4Cl" id="Fmy-ym-PIY"/>
+                                    <outlet property="delegate" destination="Qxx-7t-4Cl" id="h1u-vA-CcH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jbG-BO-H4P"/>
+                        <color key="backgroundColor" name="AppSecondaryColor"/>
+                        <constraints>
+                            <constraint firstItem="zTW-Cj-6DT" firstAttribute="leading" secondItem="jbG-BO-H4P" secondAttribute="leading" id="2cp-Dr-QWG"/>
+                            <constraint firstItem="zTW-Cj-6DT" firstAttribute="trailing" secondItem="jbG-BO-H4P" secondAttribute="trailing" id="2df-tN-DmO"/>
+                            <constraint firstItem="zTW-Cj-6DT" firstAttribute="bottom" secondItem="jbG-BO-H4P" secondAttribute="bottom" id="I42-z6-gN9"/>
+                            <constraint firstItem="zTW-Cj-6DT" firstAttribute="top" secondItem="jbG-BO-H4P" secondAttribute="top" id="iUg-oh-Ry7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewOrder" destination="zTW-Cj-6DT" id="dLi-Tj-qgx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fvx-ku-0Ql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1358" y="757"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AEN-GT-6hG">
+            <objects>
+                <viewController id="L7S-Cb-HJe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eAH-Ex-M09">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="556"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aek-qX-UOS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jZV-1e-1bg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="61"/>
+        </scene>
+        <!--Receptionist Completed OrderVC-->
+        <scene sceneID="jFq-WQ-Uah">
+            <objects>
+                <viewController storyboardIdentifier="ReceptionistCompletedOrderVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Edn-E5-u0W" customClass="ReceptionistCompletedOrderVC" customModule="My_Health_Chart_Laboratory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cfU-F7-GAU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uco-b0-R7y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Edn-E5-u0W" id="VHs-Iy-UoD"/>
+                                    <outlet property="delegate" destination="Edn-E5-u0W" id="PLJ-xF-bYH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wBJ-jg-6Ce"/>
+                        <color key="backgroundColor" name="AppSecondaryColor"/>
+                        <constraints>
+                            <constraint firstItem="uco-b0-R7y" firstAttribute="trailing" secondItem="wBJ-jg-6Ce" secondAttribute="trailing" id="KZP-d0-pfM"/>
+                            <constraint firstItem="uco-b0-R7y" firstAttribute="top" secondItem="wBJ-jg-6Ce" secondAttribute="top" id="UYV-ll-O9f"/>
+                            <constraint firstItem="uco-b0-R7y" firstAttribute="bottom" secondItem="wBJ-jg-6Ce" secondAttribute="bottom" id="ZDm-qG-fQg"/>
+                            <constraint firstItem="uco-b0-R7y" firstAttribute="leading" secondItem="wBJ-jg-6Ce" secondAttribute="leading" id="vnV-DE-nOB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewCompletedOrders" destination="uco-b0-R7y" id="HTn-Vh-weP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i8a-ww-0a4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2043" y="86"/>
+        </scene>
+        <!--Receptionist Incomlete Rejected OrderVC-->
+        <scene sceneID="zkT-vw-RPA">
+            <objects>
+                <viewController storyboardIdentifier="ReceptionistIncomleteRejectedOrderVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J6X-a9-VRI" customClass="ReceptionistIncomleteRejectedOrderVC" customModule="My_Health_Chart_Laboratory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DFa-N7-Zv0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yzc-pf-443">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="J6X-a9-VRI" id="Vyl-fw-MKe"/>
+                                    <outlet property="delegate" destination="J6X-a9-VRI" id="RBf-cb-hXE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0CB-3g-bxR"/>
+                        <color key="backgroundColor" name="AppSecondaryColor"/>
+                        <constraints>
+                            <constraint firstItem="0CB-3g-bxR" firstAttribute="bottom" secondItem="yzc-pf-443" secondAttribute="bottom" id="3Rb-dd-pUe"/>
+                            <constraint firstItem="yzc-pf-443" firstAttribute="top" secondItem="0CB-3g-bxR" secondAttribute="top" id="P0Z-eU-Zdp"/>
+                            <constraint firstItem="0CB-3g-bxR" firstAttribute="trailing" secondItem="yzc-pf-443" secondAttribute="trailing" id="Wgj-hB-TEH"/>
+                            <constraint firstItem="yzc-pf-443" firstAttribute="leading" secondItem="DFa-N7-Zv0" secondAttribute="leading" id="gNd-yt-WUE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewOrders" destination="yzc-pf-443" id="vfC-sW-irk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fY0-0c-daj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="1503"/>
+        </scene>
+        <!--Receptionist Incomplete All OrderVC-->
+        <scene sceneID="UVT-21-vnY">
+            <objects>
+                <viewController storyboardIdentifier="ReceptionistIncompleteAllOrderVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I0S-5n-W2p" customClass="ReceptionistIncompleteAllOrderVC" customModule="My_Health_Chart_Laboratory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MwB-PB-Cq6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K28-md-AbB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="I0S-5n-W2p" id="eEr-7n-6ym"/>
+                                    <outlet property="delegate" destination="I0S-5n-W2p" id="jMG-T0-KGl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d2D-c3-fBp"/>
+                        <color key="backgroundColor" name="AppSecondaryColor"/>
+                        <constraints>
+                            <constraint firstItem="d2D-c3-fBp" firstAttribute="bottom" secondItem="K28-md-AbB" secondAttribute="bottom" id="5AQ-ld-1V0"/>
+                            <constraint firstItem="K28-md-AbB" firstAttribute="leading" secondItem="MwB-PB-Cq6" secondAttribute="leading" id="iaL-br-okj"/>
+                            <constraint firstItem="d2D-c3-fBp" firstAttribute="trailing" secondItem="K28-md-AbB" secondAttribute="trailing" id="m6D-Py-m9L"/>
+                            <constraint firstItem="K28-md-AbB" firstAttribute="top" secondItem="d2D-c3-fBp" secondAttribute="top" id="sjV-R5-zDK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewOrders" destination="K28-md-AbB" id="gd3-jX-yCX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxP-j2-Spo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="1503"/>
+        </scene>
+        <!--Receptionist Incomplete Cancelled OrderVC-->
+        <scene sceneID="QnK-ZS-T9d">
+            <objects>
+                <viewController storyboardIdentifier="ReceptionistIncompleteCancelledOrderVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3gm-h5-ztO" customClass="ReceptionistIncompleteCancelledOrderVC" customModule="My_Health_Chart_Laboratory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vqB-rb-ya9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DPC-E7-Bi0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3gm-h5-ztO" id="yy7-xq-RpF"/>
+                                    <outlet property="delegate" destination="3gm-h5-ztO" id="rrD-Dx-v50"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Jv-b1-bIX"/>
+                        <color key="backgroundColor" name="AppSecondaryColor"/>
+                        <constraints>
+                            <constraint firstItem="DPC-E7-Bi0" firstAttribute="leading" secondItem="vqB-rb-ya9" secondAttribute="leading" id="7BD-LU-pGz"/>
+                            <constraint firstItem="DPC-E7-Bi0" firstAttribute="top" secondItem="8Jv-b1-bIX" secondAttribute="top" id="NvW-TO-aLd"/>
+                            <constraint firstItem="8Jv-b1-bIX" firstAttribute="bottom" secondItem="DPC-E7-Bi0" secondAttribute="bottom" id="jIG-kO-hnx"/>
+                            <constraint firstItem="8Jv-b1-bIX" firstAttribute="trailing" secondItem="DPC-E7-Bi0" secondAttribute="trailing" id="skz-Bs-fWB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewOrders" destination="DPC-E7-Bi0" id="FTA-uj-TS5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ner-QU-et4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1358" y="1503"/>
+        </scene>
+        <!--Receptionist Accept Order ListVC-->
+        <scene sceneID="roa-mJ-GIF">
+            <objects>
+                <viewController storyboardIdentifier="ReceptionistAcceptOrderListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ONu-E9-iVz" customClass="ReceptionistAcceptOrderListVC" customModule="My_Health_Chart_Laboratory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jKK-s5-sAM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VTX-3I-U5p">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gvd-ml-Vh0">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="ONu-E9-iVz" id="V2T-CW-Gsf"/>
+                                            <outlet property="delegate" destination="ONu-E9-iVz" id="cxd-IJ-KZ6"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i33-Uo-FL2"/>
+                        <color key="backgroundColor" name="AppSecondaryColor"/>
+                        <constraints>
+                            <constraint firstItem="VTX-3I-U5p" firstAttribute="trailing" secondItem="i33-Uo-FL2" secondAttribute="trailing" id="5e8-9m-nND"/>
+                            <constraint firstItem="VTX-3I-U5p" firstAttribute="leading" secondItem="i33-Uo-FL2" secondAttribute="leading" id="WPb-0R-pLi"/>
+                            <constraint firstItem="i33-Uo-FL2" firstAttribute="bottom" secondItem="VTX-3I-U5p" secondAttribute="bottom" id="piW-nN-bbS"/>
+                            <constraint firstItem="VTX-3I-U5p" firstAttribute="top" secondItem="i33-Uo-FL2" secondAttribute="top" id="qQ7-Nj-93H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewAcceptedOrders" destination="gvd-ml-Vh0" id="OZm-pA-ePP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t66-n5-Fbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="86"/>
+        </scene>
+        <!--Receptionist Incomplete Order TabbarVC-->
+        <scene sceneID="M9c-wB-Fge">
+            <objects>
+                <viewController storyboardIdentifier="ReceptionistIncompleteOrderTabbarVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tbt-wd-hfl" customClass="ReceptionistIncompleteOrderTabbarVC" customModule="My_Health_Chart_Laboratory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SvC-Hu-dCg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IY8-ay-Z4H">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOx-Zw-adY" customClass="Toolbar" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="g5p-Oz-Tge"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMr-vU-qhV">
+                                        <rect key="frame" x="0.0" y="78" width="414" height="44"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Order or patient name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aa7-kP-7CT" customClass="AppTextfield" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="ic_search"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="Padding">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="aa7-kP-7CT" firstAttribute="top" secondItem="PMr-vU-qhV" secondAttribute="top" id="Esx-Rc-8CL"/>
+                                            <constraint firstItem="aa7-kP-7CT" firstAttribute="leading" secondItem="PMr-vU-qhV" secondAttribute="leading" constant="16" id="VOy-gO-UFO"/>
+                                            <constraint firstAttribute="bottom" secondItem="aa7-kP-7CT" secondAttribute="bottom" id="bli-TC-5gU"/>
+                                            <constraint firstAttribute="trailing" secondItem="aa7-kP-7CT" secondAttribute="trailing" constant="16" id="jEc-CZ-RM3"/>
+                                            <constraint firstAttribute="height" constant="44" id="rnG-th-Pma"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="uVp-bg-ik8">
+                                        <rect key="frame" x="0.0" y="130" width="414" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DYb-0P-WZO">
+                                                <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xx-sh-UBH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="49"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                                        <state key="normal" title="All">
+                                                            <color key="titleColor" name="AppPrimaryColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnTabBarPressed:" destination="tbt-wd-hfl" eventType="touchUpInside" id="WrD-w1-fKt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKO-ki-nLq">
+                                                        <rect key="frame" x="0.0" y="49" width="135.33333333333334" height="1"/>
+                                                        <color key="backgroundColor" name="AppPrimaryColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="wHQ-1z-123"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vbL-at-7hj">
+                                                <rect key="frame" x="139.33333333333331" y="0.0" width="135.33333333333331" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0U-If-ViF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="50"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                        <state key="normal" title="Rejected">
+                                                            <color key="titleColor" name="AppFontSecondaryColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnTabBarPressed:" destination="tbt-wd-hfl" eventType="touchUpInside" id="7At-4S-kvl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w76-lx-JOf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="1"/>
+                                                        <color key="backgroundColor" name="AppPrimaryColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="h5i-8Z-4dh"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hRg-Eg-iTO">
+                                                <rect key="frame" x="278.66666666666669" y="0.0" width="135.33333333333331" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM6-jO-bht">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="50"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                        <state key="normal" title="Cancelled">
+                                                            <color key="titleColor" name="AppFontSecondaryColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnTabBarPressed:" destination="tbt-wd-hfl" eventType="touchUpInside" id="16G-cO-bSF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQG-FM-D1m">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="1"/>
+                                                        <color key="backgroundColor" name="AppPrimaryColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="d9x-I5-NCm"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="IpO-MB-XK1"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eg5-9z-dpa">
+                                        <rect key="frame" x="0.0" y="188" width="414" height="548"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dj3-fu-xuU"/>
+                        <color key="backgroundColor" name="AppSecondaryColor"/>
+                        <constraints>
+                            <constraint firstItem="IY8-ay-Z4H" firstAttribute="trailing" secondItem="dj3-fu-xuU" secondAttribute="trailing" id="Fzr-Pr-ZAT"/>
+                            <constraint firstItem="IY8-ay-Z4H" firstAttribute="leading" secondItem="dj3-fu-xuU" secondAttribute="leading" id="c8y-Yv-AaW"/>
+                            <constraint firstItem="IY8-ay-Z4H" firstAttribute="bottom" secondItem="dj3-fu-xuU" secondAttribute="bottom" id="nQ4-Wm-kcH"/>
+                            <constraint firstItem="IY8-ay-Z4H" firstAttribute="top" secondItem="dj3-fu-xuU" secondAttribute="top" id="twn-Zb-69T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="uiViewTabContainer" destination="eg5-9z-dpa" id="jgv-bs-ljw"/>
+                        <outlet property="uiViewToolbar" destination="qOx-Zw-adY" id="uwZ-QP-1G9"/>
+                        <outletCollection property="btnTabBar" destination="4Xx-sh-UBH" collectionClass="NSMutableArray" id="dhe-aH-87g"/>
+                        <outletCollection property="btnTabBar" destination="O0U-If-ViF" collectionClass="NSMutableArray" id="13W-67-GcR"/>
+                        <outletCollection property="btnTabBar" destination="TM6-jO-bht" collectionClass="NSMutableArray" id="UP4-43-Lvx"/>
+                        <outletCollection property="uiViewUnderLine" destination="QKO-ki-nLq" collectionClass="NSMutableArray" id="9Xe-c1-Zeu"/>
+                        <outletCollection property="uiViewUnderLine" destination="w76-lx-JOf" collectionClass="NSMutableArray" id="v1h-Nl-gbX"/>
+                        <outletCollection property="uiViewUnderLine" destination="IQG-FM-D1m" collectionClass="NSMutableArray" id="eVU-u8-M9L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Qg-Jg-ZG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="1504"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="27I-Vq-gt0">
+            <size key="intrinsicContentSize" width="44" height="38"/>
+        </designable>
+        <designable name="eee-pP-i9e">
+            <size key="intrinsicContentSize" width="57" height="38"/>
+        </designable>
+        <designable name="jAr-6V-rpe">
+            <size key="intrinsicContentSize" width="30" height="38"/>
+        </designable>
+        <designable name="yrp-MH-fU9">
+            <size key="intrinsicContentSize" width="49" height="38"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="ic_accepted_order_grey" width="24" height="24"/>
+        <image name="ic_completed_order_grey" width="24" height="24"/>
+        <image name="ic_home_tab_blue" width="24" height="24"/>
+        <image name="ic_notification" width="24" height="24"/>
+        <image name="ic_sample_grey" width="24" height="24"/>
+        <image name="ic_search" width="17.666666030883789" height="18"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="AppFontPrimaryColor">
+            <color red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppFontSecondaryColor">
+            <color red="0.49803921568627452" green="0.52549019607843139" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppPrimaryColor">
+            <color red="0.023529411764705882" green="0.62745098039215685" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppSecondaryColor">
+            <color red="0.95686274509803926" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

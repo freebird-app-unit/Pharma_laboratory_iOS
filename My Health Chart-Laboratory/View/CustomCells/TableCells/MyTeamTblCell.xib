@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="77" id="KGk-i7-Jjw" customClass="MyTeamTblCell" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H7m-V5-Jqa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jmt-PV-OiA">
+                                <rect key="frame" x="16" y="7" width="288" height="53"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-81-hmk">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gI4-Qt-Gyl" customClass="BorderImageView" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundedCorners" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="gI4-Qt-Gyl" secondAttribute="bottom" id="0qf-E2-A6D"/>
+                                            <constraint firstItem="gI4-Qt-Gyl" firstAttribute="leading" secondItem="l6h-81-hmk" secondAttribute="leading" id="0wp-NG-FMD"/>
+                                            <constraint firstAttribute="width" secondItem="l6h-81-hmk" secondAttribute="height" multiplier="1:1" id="eQ3-m1-yIj"/>
+                                            <constraint firstItem="gI4-Qt-Gyl" firstAttribute="top" secondItem="l6h-81-hmk" secondAttribute="top" id="q9i-Vs-QbZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="gI4-Qt-Gyl" secondAttribute="trailing" id="sid-Au-sCT"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wF2-pg-A0W">
+                                        <rect key="frame" x="61" y="0.0" width="111" height="53"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maria Smith" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTw-Wc-ZdO">
+                                                <rect key="frame" x="0.0" y="0.0" width="111" height="26.5"/>
+                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                                                <color key="textColor" name="AppFontPrimaryColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTI-3t-GwJ">
+                                                <rect key="frame" x="0.0" y="26.5" width="111" height="26.5"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                                <color key="textColor" name="AppFontSecondaryColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAe-4X-rqV">
+                                        <rect key="frame" x="180" y="0.0" width="58" height="53"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vg6-ho-VaM">
+                                                <rect key="frame" x="5" y="11" width="50" height="31"/>
+                                                <color key="tintColor" name="AppSecondaryColor"/>
+                                                <color key="onTintColor" name="AppPrimaryColor"/>
+                                            </switch>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="vg6-ho-VaM" firstAttribute="centerY" secondItem="FAe-4X-rqV" secondAttribute="centerY" id="G7d-qj-apM"/>
+                                            <constraint firstItem="vg6-ho-VaM" firstAttribute="leading" secondItem="FAe-4X-rqV" secondAttribute="leading" constant="5" id="XAO-Ut-Vjd"/>
+                                            <constraint firstAttribute="trailing" secondItem="vg6-ho-VaM" secondAttribute="trailing" constant="5" id="kAw-z6-WZ3"/>
+                                            <constraint firstAttribute="width" constant="58" id="ww8-Ei-AD5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgB-9d-2NW">
+                                        <rect key="frame" x="246" y="0.0" width="42" height="53"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfg-7d-n3J">
+                                                <rect key="frame" x="8" y="9.5" width="34" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bfg-7d-n3J" secondAttribute="height" multiplier="1:1" id="5UJ-MD-6GX"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="ic_call_bordered"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="bfg-7d-n3J" firstAttribute="leading" secondItem="TgB-9d-2NW" secondAttribute="leading" constant="8" id="3zR-oA-cPa"/>
+                                            <constraint firstItem="bfg-7d-n3J" firstAttribute="centerY" secondItem="TgB-9d-2NW" secondAttribute="centerY" id="Jh8-fO-MVU"/>
+                                            <constraint firstAttribute="width" constant="42" id="TLi-V3-mLX"/>
+                                            <constraint firstAttribute="trailing" secondItem="bfg-7d-n3J" secondAttribute="trailing" id="fk5-pf-wYy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jmt-PV-OiA" firstAttribute="top" secondItem="H7m-V5-Jqa" secondAttribute="top" constant="7" id="0e5-30-8mn"/>
+                            <constraint firstAttribute="bottom" secondItem="Jmt-PV-OiA" secondAttribute="bottom" constant="7" id="6UZ-Tu-T6B"/>
+                            <constraint firstAttribute="trailing" secondItem="Jmt-PV-OiA" secondAttribute="trailing" constant="16" id="6jO-Ht-V8G"/>
+                            <constraint firstItem="Jmt-PV-OiA" firstAttribute="leading" secondItem="H7m-V5-Jqa" secondAttribute="leading" constant="16" id="MHx-Ot-XbP"/>
+                            <constraint firstAttribute="height" constant="67" id="yCh-eY-KqI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="H7m-V5-Jqa" secondAttribute="trailing" id="0iU-ov-pIY"/>
+                    <constraint firstAttribute="bottom" secondItem="H7m-V5-Jqa" secondAttribute="bottom" constant="10" id="HgK-OL-kGH"/>
+                    <constraint firstItem="H7m-V5-Jqa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="w9h-Tt-sHq"/>
+                    <constraint firstItem="H7m-V5-Jqa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yf1-ON-Aid"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="uiSwitch" destination="vg6-ho-VaM" id="hxE-0p-lMz"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="93.75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_call_bordered" width="24" height="24"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppFontPrimaryColor">
+            <color red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppFontSecondaryColor">
+            <color red="0.49803921568627452" green="0.52549019607843139" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppPrimaryColor">
+            <color red="0.023529411764705882" green="0.62745098039215685" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppSecondaryColor">
+            <color red="0.95686274509803926" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

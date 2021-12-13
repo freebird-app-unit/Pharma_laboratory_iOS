@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Toolbar" customModule="My_Health_Chart_Laboratory" customModuleProvider="target">
+            <connections>
+                <outlet property="btnBack" destination="udA-uT-gzE" id="lX4-BG-Chj"/>
+                <outlet property="btnClearAll" destination="yJK-LG-exD" id="KML-RL-Qkk"/>
+                <outlet property="btnSearch" destination="eg2-0F-iee" id="zg6-Jd-TdL"/>
+                <outlet property="btnSetting" destination="J0A-6w-s6f" id="hRO-AV-wbT"/>
+                <outlet property="labelTitle" destination="9DB-ue-TiI" id="Tc8-NJ-jzr"/>
+                <outlet property="searchBar" destination="NTi-Ff-BhY" id="BUh-3J-3Om"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-AW-3pj">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udA-uT-gzE">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="48" id="8k1-U2-4Sa"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="ic_arrow_back">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </preferredSymbolConfiguration>
+                            </state>
+                            <connections>
+                                <action selector="btnBackPressed:" destination="-1" eventType="touchUpInside" id="3if-im-8md"/>
+                            </connections>
+                        </button>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DB-ue-TiI">
+                            <rect key="frame" x="184" y="0.0" width="46" height="80"/>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
+                            <color key="textColor" name="AppFontPrimaryColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y30-By-VwE">
+                            <rect key="frame" x="234" y="0.0" width="180" height="80"/>
+                            <subviews>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg2-0F-iee">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="GEK-4K-3EA"/>
+                                    </constraints>
+                                    <color key="tintColor" name="AppFontSecondaryColor"/>
+                                    <state key="normal" image="magnifyingglass" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        </preferredSymbolConfiguration>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnSearchPressed:" destination="-1" eventType="touchUpInside" id="gJ5-Ym-cbZ"/>
+                                    </connections>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0A-6w-s6f">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="0dI-Pu-u6E"/>
+                                    </constraints>
+                                    <color key="tintColor" name="AppFontPrimaryColor"/>
+                                    <state key="normal" image="slider.vertical.3" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        </preferredSymbolConfiguration>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnSettingsPressed:" destination="-1" eventType="touchUpInside" id="acs-0e-oWu"/>
+                                    </connections>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJK-LG-exD">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="KDC-i3-B00"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="Clear all">
+                                        <color key="titleColor" name="AppThemeColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnClearAllPressed:" destination="-1" eventType="touchUpInside" id="0Fg-cg-0bZ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <searchBar hidden="YES" contentMode="redraw" searchBarStyle="minimal" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NTi-Ff-BhY">
+                            <rect key="frame" x="48" y="14.5" width="366" height="51"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="9DB-ue-TiI" firstAttribute="centerX" secondItem="cOc-AW-3pj" secondAttribute="centerX" id="0MT-fe-Y9B"/>
+                        <constraint firstItem="y30-By-VwE" firstAttribute="leading" secondItem="9DB-ue-TiI" secondAttribute="trailing" constant="4" id="A2C-01-6gt"/>
+                        <constraint firstAttribute="trailing" secondItem="NTi-Ff-BhY" secondAttribute="trailing" id="AYS-Ra-teo"/>
+                        <constraint firstAttribute="trailing" secondItem="y30-By-VwE" secondAttribute="trailing" id="Eig-dy-HYU"/>
+                        <constraint firstAttribute="bottom" secondItem="y30-By-VwE" secondAttribute="bottom" id="Fd7-ll-mZW"/>
+                        <constraint firstItem="udA-uT-gzE" firstAttribute="top" secondItem="cOc-AW-3pj" secondAttribute="top" id="SRE-Ig-x7d"/>
+                        <constraint firstAttribute="bottom" secondItem="udA-uT-gzE" secondAttribute="bottom" id="Wfs-4O-bOR"/>
+                        <constraint firstItem="y30-By-VwE" firstAttribute="top" secondItem="cOc-AW-3pj" secondAttribute="top" id="Xi2-Nn-bOd"/>
+                        <constraint firstItem="udA-uT-gzE" firstAttribute="leading" secondItem="cOc-AW-3pj" secondAttribute="leading" id="ceU-92-hdw"/>
+                        <constraint firstAttribute="bottom" secondItem="9DB-ue-TiI" secondAttribute="bottom" id="kYJ-1u-RTS"/>
+                        <constraint firstItem="NTi-Ff-BhY" firstAttribute="leading" secondItem="udA-uT-gzE" secondAttribute="trailing" id="nAO-YN-bgb"/>
+                        <constraint firstItem="9DB-ue-TiI" firstAttribute="top" secondItem="cOc-AW-3pj" secondAttribute="top" id="pKy-Ey-Aed"/>
+                        <constraint firstItem="NTi-Ff-BhY" firstAttribute="centerY" secondItem="cOc-AW-3pj" secondAttribute="centerY" id="rNL-uI-aG3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="cOc-AW-3pj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EUC-fh-CxX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cOc-AW-3pj" secondAttribute="trailing" id="Pm5-7P-J23"/>
+                <constraint firstItem="cOc-AW-3pj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Rk4-89-U9G"/>
+                <constraint firstAttribute="bottom" secondItem="cOc-AW-3pj" secondAttribute="bottom" id="aaS-SF-v1R"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-147.32142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_arrow_back" width="24" height="24"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="slider.vertical.3" catalog="system" width="128" height="111"/>
+        <namedColor name="AppFontPrimaryColor">
+            <color red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppFontSecondaryColor">
+            <color red="0.49803921568627452" green="0.52549019607843139" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppThemeColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
